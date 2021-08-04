@@ -104,7 +104,7 @@ function render() {
         listDisplayContainer.style.display = '';
         listTitleElement.innerText = selectedList.name;
         renderTaskCount(selectedList);
-        clearElement(tasksCountainer);
+        clearElement(tasksContainer);
         renderTasks(selectedList);
     }
 };
@@ -118,7 +118,7 @@ function renderTasks(selectedList) {
         const label = taskElement.querySelector('label');
         label.htmlFor = task.id;
         label.append(task.name);
-        tasksCountainer.appendChild(taskElement);
+        tasksContainer.appendChild(taskElement);
     });
 };
 
